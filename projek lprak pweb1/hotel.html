@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL</title>
+    <style>
+        nav {
+            background-color: #4f4f4f;
+            display: inline-block;
+            width: 100%;
+        }
+        nav ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        nav ul li {
+            float: left;
+            background-color: #4f4f4f;
+            gap: 1px;
+            position: relative;
+        }
+        nav a {
+            display: block;
+            padding: 0 10px;
+            color: #fff;
+            line-height: 60px;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: black;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 60px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul li {
+            width: 170px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+        nav ul ul ul li {
+            position: relative;
+            top: -50px;
+            left: 170px;
+        }
+        h1 {
+            color: white;
+        }
+        .gambar {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        .gambar img {
+            width: 300px;
+            height: 130px;
+        }
+        .header-logo {
+            display: flex;
+            gap: 600px;
+        }
+        .login-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .login-form input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4f4f4f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: black;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <header style="display: flex; align-items: center; gap: 10px; padding: 5px;">
+        <img src="bgksng.png" alt="" width="150px">
+        <div class="header-logo">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">HOTEL L'AVERS</h1>
+            <img src="png.jpeg" alt="Gambar Hotel" width="300px" height="70px">   
+        </div>
+    </header>
+    <nav style="padding: 0px;">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="kamar.html">KAMAR</a></li>
+            <li><a href="fasilitas.html">FASILITAS</a></li>
+            <li><a href="pemesanan.html">PESAN SEKARANG</a></li>
+            <li><a href="#" id="login-button">LOGIN ADMIN</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+    <div class="login-form" id="login-form">
+        <h2>LOGIN</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">LOGIN</button>
+            <button type="button" id="close-login">CANCEL</button>
+        </form>
+    </div>
+    
+    <main style="flex: 1; display: flex; gap: 50px; padding: 8px">
+        <div class="videos" style="display: flex; flex-direction: column; gap: 10px; background-color: none; padding: 1%; height: 1%;">
+            <iframe src="https://www.youtube.com/embed/ldtQgtaZu0c?si=Wk5x2p2lPgcIqCi3" frameborder="0" allowfullscreen width="230px" height="110px"></iframe>
+            <iframe src="https://www.youtube.com/embed/H1CIBqDeWQ0" frameborder="0" allowfullscreen width="230px" height="110px"></iframe>
+            <iframe src="https://www.youtube.com/embed/H1CIBqDeWQ0" frameborder="0" allowfullscreen width="230px" height="110px"></iframe>
+        </div>
+        <div class="gambar">
+            <table>
+                <tr>
+                    <td><img src="Kamar 1.jpg" alt=""></td>
+                    <td><img src="Kamar 2.webp" alt=""></td>
+                    <td><img src="Kamar 3.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Kamar 4.jpeg" alt=""></td>
+                    <td><img src="Kamar 5.webp" alt=""></td>
+                    <td><img src="Kamar 6.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img src="Kamar 7.jpeg" alt=""></td>
+                    <td><img src="Kamar 8.webp" alt=""></td>
+                    <td><img src="Kamar 9.webp" alt=""></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer style="flex: 0 0 5%; background-color: #4f4f4f; text-align: center; padding: 1px; margin: 10px;">
+        <p style="color: #f1f1f1;">@CopyRight Roy Wijaya 2024</p>
+    </footer>
+    <script src="loginadmin.js"></script>
+</body>
+</html>
